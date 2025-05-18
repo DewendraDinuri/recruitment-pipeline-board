@@ -359,3 +359,64 @@ body {
     font-size: 0.85rem;
   }
 }
+
+/* Stage header colors */
+.column h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column h2.applying::before {
+  content: "•";
+  color: #f97316;
+}
+.column h2.screening::before {
+  content: "•";
+  color: #a855f7;
+}
+.column h2.interview::before {
+  content: "•";
+  color: #3b82f6;
+}
+.column h2.test::before {
+  content: "•";
+  color: #10b981;
+}
+
+/* Active tab */
+.tab.active {
+  color: #111827;
+  border-bottom: 2px solid #2563eb;
+  font-weight: bold;
+}
+
+/* Card three-dot menu */
+.card-menu:hover + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  right: 8px;
+  top: 28px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  z-index: 50;
+}
+
+.dropdown-menu div {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu div:hover {
+  background-color: #f3f4f6;
+}
