@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:5001/api/candidates";
+const BASE_URL = "http://localhost:5001http://localhost:5000/api/candidates";
 
 export const getCandidates = async () => {
   const res = await fetch(BASE_URL);

@@ -299,3 +299,63 @@ body {
   color: #6b7280;
   font-size: 0.85rem;
 }
+
+/* Sidebar hover animation */
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: -150px;
+  width: 200px;
+  height: calc(100vh - 64px);
+  background-color: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar:hover {
+  left: 0;
+}
+
+/* Shift content when sidebar is hovered */
+.App:hover ~ .board,
+.App:hover ~ .page-header {
+  margin-left: 200px !important;
+}
+
+.board,
+.page-header {
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .board,
+  .page-header {
+    margin-left: 0 !important;
+  }
+
+  .navbar-light {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tabs,
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .column {
+    min-width: 90vw;
+  }
+
+  .candidate-card {
+    font-size: 0.85rem;
+  }
+}
