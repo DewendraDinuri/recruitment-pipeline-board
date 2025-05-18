@@ -1,11 +1,19 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
 import Board from './pages/Board';
 
 function App() {
   return (
-    <div className="App">
-      <Board />
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      <div className="App">
+        <Sidebar />
+        <Board />
+      </div>
+    </>
   );
 }
 
