@@ -1,1 +1,0 @@
-Client folder will contain the fully working React Kanban UI.

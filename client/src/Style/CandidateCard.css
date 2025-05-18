@@ -1,0 +1,55 @@
+
+.candidate-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.candidate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.application-date {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.rating {
+  margin-top: 4px;
+}
+
+.star {
+  color: #d1d5db;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #fbbf24;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 6px;
+  background-color: #10b981;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.score-label {
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
