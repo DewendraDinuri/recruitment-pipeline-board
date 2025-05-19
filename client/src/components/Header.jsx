@@ -12,8 +12,10 @@ import {
   FaWpforms,
   FaCog,
   FaUser,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
+  FaUserPlus
 } from 'react-icons/fa';
+import { RiBarChartGroupedLine } from 'react-icons/ri'; // Kanban-style icon
 import '../styles/Header.css';
 
 const Header = () => {
@@ -37,7 +39,7 @@ const Header = () => {
           <span className="badge green">🟢 Open</span>
           <span className="badge gray"><FaUser /> Researcher</span>
           <span className="badge gray"><FaMapMarkerAlt /> Onsite</span>
-          <span className="badge creator">👤 Created by Bagus Fikri</span>
+          <span className="badge creator">Created by Bagus Fikri</span>
         </div>
       </div>
 
@@ -52,13 +54,23 @@ const Header = () => {
           <span className="tab"><FaWpforms className="tab-icon" /> Application Form</span>
           <span className="tab"><FaCog className="tab-icon" /> Automation <span className="automation-badge">5</span></span>
         </div>
+
+        
         <div className="filters">
           <input type="text" placeholder="Search" className="search" />
           <select className="filter"><option>Date Range</option></select>
           <select className="filter"><option>Score Range</option></select>
           <select className="filter"><option>Advance Filter</option></select>
-          <button className="filter">👤 Refer People</button>
-          <button className="filter">📊 Kanban ▾</button>
+
+          
+          <button className="filter">
+            <FaUserPlus className="tab-icon" />
+            Refer People
+          </button>
+          <button className="filter">
+            <RiBarChartGroupedLine className="tab-icon" />
+            Kanban ▾
+          </button>
         </div>
       </div>
     </div>

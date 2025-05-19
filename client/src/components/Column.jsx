@@ -1,26 +1,27 @@
 import React from 'react';
-import CandidateCard from './CandidateCard';
 
-function Column({ title, stage, candidates }) {
-  const filteredCandidates = candidates.filter(c => c.stage === stage);
+// CandidateModal component for displaying a modal popup
+const CandidateModal = ({ show, onClose }) => {
+  // If `show` is false, render nothing (modal is hidden)
+  if (!show) return null;
 
   return (
-    <div className="column">
-      <div className="column-header">
-        <div className="column-title-wrapper">
-          <span className={`column-title ${stage}`}>{title}</span>
-          <span className="column-count">{filteredCandidates.length}</span>
-        </div>
-        <span className="column-detail">Detail &gt;</span>
-      </div>
+    // Modal overlay to dim the background
+    <div className="modal-overlay">
+      <div className="modal-content">
+        {/* Modal heading */}
+        <h3>Add New Candidate</h3>
 
-      <div className="candidate-list">
-        {filteredCandidates.map(candidate => (
-          <CandidateCard key={candidate.id} candidate={candidate} />
-        ))}
+        {/* Placeholder content – you can replace this with a form */}
+        <p>(Form coming soon...)</p>
+
+        {/* Close button */}
+        <button onClick={onClose} className="modal-close-btn">
+          Close
+        </button>
       </div>
     </div>
   );
-}
+};
 
-export default Column;
+export default CandidateModal;
