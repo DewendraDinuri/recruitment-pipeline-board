@@ -15,8 +15,80 @@ This project is a full-stack recruitment management tool that visualizes candida
     * RESTful API with CRUD operations
     * Filter candidates by stage
     
-🛠 Setup Instructions  
-Backend   
-- cd server
-- npm install
-- node server.js  
+# Recruitment Pipeline Board
+
+This is a full-stack recruitment board web application, divided into two parts:
+
+- **client/**: Frontend built with React
+- **server/**: Backend built with Node.js + Express
+
+## Prerequisites
+
+- Node.js >= 14
+- npm >= 6
+
+##  Installation & Setup
+
+### 1. Clone the project
+
+```
+git clone 
+cd recruitment-pipeline-board
+```
+
+### 2. Install Server Dependencies
+
+```
+cd server
+npm install
+```
+
+Then start the server:
+
+```
+npm start
+```
+
+The server runs at `http://localhost:5001`
+
+### 3. Install Client Dependencies
+
+```
+cd ../client
+npm install
+```
+
+Install required UI packages:
+
+```
+npm install react-icons
+npm install @fortawesome/fontawesome-free
+```
+
+Then run the client:
+
+```
+npm start
+```
+
+The client runs at `http://localhost:3000`
+
+## Folder Structure
+
+```
+recruitment-pipeline-board/
+├── client/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── ...
+├── server/
+│   ├── index.js
+│   └── package.json
+└── README.md
+```
+
+## Notes
+
+- Do not forget to run **both** client and server before testing
+- Assets like avatars are stored under `client/src/assets`
