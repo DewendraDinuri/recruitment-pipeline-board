@@ -1,9 +1,20 @@
-
-const BASE_URL = "http://localhost:5001http://localhost:5000/api/candidates";
+const BASE_URL = "http://localhost:5000/api/candidates";
 
 export const getCandidates = async () => {
   const res = await fetch(BASE_URL);
   return await res.json();
+};
+
+export const getCandidateCount = async () => {
+  const res = await fetch(BASE_URL);
+  const data = await res.json();
+  return data.length;
+};
+
+// Placeholder for job count
+export const getJobCount = async () => {
+  // Replace with actual API in future
+  return 8;
 };
 
 export const getCandidatesByStage = async (stage) => {

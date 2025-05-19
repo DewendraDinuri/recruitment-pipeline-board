@@ -1,0 +1,90 @@
+/* Navbar.css */
+.navbar-dark {
+    background-color: #1f2937;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .navbar-tabs {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .tab {
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #374151;
+  }
+  
+  .tab-count,
+  .badge {
+    background: #f97316;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    margin-left: 6px;
+    color: white;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .icon-btn {
+    background-color: #374151;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .icon-btn.yellow {
+    background-color: #facc15;
+    color: black;
+  }
+  
+  .notification .dot {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .navbar-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+  
