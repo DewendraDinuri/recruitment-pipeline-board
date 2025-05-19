@@ -1,5 +1,19 @@
 import React from 'react';
-import { FaArrowLeft, FaUser, FaMapMarkerAlt, FaShareAlt, FaEllipsisH, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import {
+  FaArrowLeft,
+  FaChevronLeft,
+  FaChevronRight,
+  FaShareAlt,
+  FaUsers,
+  FaFileAlt,
+  FaCalendarAlt,
+  FaClipboardList,
+  FaBolt,
+  FaWpforms,
+  FaCog,
+  FaUser,
+  FaMapMarkerAlt
+} from 'react-icons/fa';
 import '../styles/Header.css';
 
 const Header = () => {
@@ -16,7 +30,7 @@ const Header = () => {
             <FaChevronRight />
             <span>1 of 8</span>
           </div>
-          <FaEllipsisH className="icon-btn" />
+          <FaShareAlt className="icon-btn" />
           <button className="share-btn"><FaShareAlt /> Share & Promote</button>
         </div>
         <div className="header-tags">
@@ -30,13 +44,13 @@ const Header = () => {
       {/* Navigation Tabs */}
       <div className="header-tabs">
         <div className="tabs">
-          <span className="tab active">👥 Candidates</span>
-          <span className="tab">📄 Job Info</span>
-          <span className="tab">📅 Calendar</span>
-          <span className="tab">🗂️ Score Card</span>
-          <span className="tab">⚡ Activity</span>
-          <span className="tab">📝 Application Form</span>
-          <span className="tab">⚙️ Automation <span className="badge gray">5</span></span>
+          <span className="tab active"><FaUsers className="tab-icon" /> Candidates</span>
+          <span className="tab"><FaFileAlt className="tab-icon" /> Job Info</span>
+          <span className="tab"><FaCalendarAlt className="tab-icon" /> Calendar</span>
+          <span className="tab"><FaClipboardList className="tab-icon" /> Score Card</span>
+          <span className="tab"><FaBolt className="tab-icon" /> Activity</span>
+          <span className="tab"><FaWpforms className="tab-icon" /> Application Form</span>
+          <span className="tab"><FaCog className="tab-icon" /> Automation <span className="automation-badge">5</span></span>
         </div>
         <div className="filters">
           <input type="text" placeholder="Search" className="search" />
