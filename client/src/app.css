@@ -6,40 +6,6 @@ body {
   background-color: #f9fafb;
 }
 
-/* Updated top navbar styling */
-.navbar-light {
-  background-color: #f9fafb;
-  color: #1f2937;
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.logo-text {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #111827;
-}
-
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.navbar-tabs {
-  display: flex;
-  gap: 1.5rem;
-}
-
 .tab {
   padding: 6px 12px;
   border-radius: 8px;
@@ -111,33 +77,7 @@ body {
   border: 2px solid white;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 200px;
-  background-color: #f9fafb;
-  height: 100vh;
-  padding: 1rem;
-  position: fixed;
-  left: 0;
-  top: 64px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-right: 1px solid #e5e7eb;
-}
 
-.App {
-  display: flex;
-}
-
-.board {
-  margin-left: 200px;
-  margin-top: 64px;
-  padding: 20px;
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-}
 
 .column {
   background-color: #f0f0f0;
@@ -298,4 +238,125 @@ body {
   margin-top: 10px;
   color: #6b7280;
   font-size: 0.85rem;
+}
+
+/* Sidebar hover animation */
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: -150px;
+  width: 200px;
+  height: calc(100vh - 64px);
+  background-color: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar:hover {
+  left: 0;
+}
+
+/* Shift content when sidebar is hovered */
+.App:hover ~ .board,
+.App:hover ~ .page-header {
+  margin-left: 200px !important;
+}
+
+.board,
+.page-header {
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .board,
+  .page-header {
+    margin-left: 0 !important;
+  }
+
+  .navbar-light {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tabs,
+  .filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .column {
+    min-width: 90vw;
+  }
+
+  .candidate-card {
+    font-size: 0.85rem;
+  }
+}
+
+/* Stage header colors */
+.column h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column h2.applying::before {
+  content: "•";
+  color: #f97316;
+}
+.column h2.screening::before {
+  content: "•";
+  color: #a855f7;
+}
+.column h2.interview::before {
+  content: "•";
+  color: #3b82f6;
+}
+.column h2.test::before {
+  content: "•";
+  color: #10b981;
+}
+
+/* Active tab */
+.tab.active {
+  color: #111827;
+  border-bottom: 2px solid #2563eb;
+  font-weight: bold;
+}
+
+/* Card three-dot menu */
+.card-menu:hover + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  right: 8px;
+  top: 28px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  z-index: 50;
+}
+
+.dropdown-menu div {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu div:hover {
+  background-color: #f3f4f6;
 }
