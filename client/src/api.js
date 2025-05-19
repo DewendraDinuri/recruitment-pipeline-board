@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api/candidates";
+const BASE_URL = `${process.env.REACT_APP_API_URL}/api/candidates`;
 
 export const getCandidates = async () => {
   const res = await fetch(BASE_URL);
@@ -11,9 +11,8 @@ export const getCandidateCount = async () => {
   return data.length;
 };
 
-// Placeholder for job count
 export const getJobCount = async () => {
-  // Replace with actual API in future
+  // Replace with real API when ready
   return 8;
 };
 
