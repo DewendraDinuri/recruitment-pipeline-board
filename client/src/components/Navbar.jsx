@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import avatar from '../assets/avatar1.png';
 import { FaPlus, FaSearch, FaBell } from 'react-icons/fa';
 import { getCandidateCount, getJobCount } from '../api';
-import '../Style/Navbar.css';
+import '../styles/Navbar.css';
 
 function Navbar() {
   const [jobCount, setJobCount] = useState(0);
