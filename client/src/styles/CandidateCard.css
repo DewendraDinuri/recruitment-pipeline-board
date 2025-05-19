@@ -1,15 +1,20 @@
-
 .candidate-card {
   background: white;
-  border-radius: 8px;
-  padding: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
 }
 
 .candidate-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .avatar {
@@ -17,7 +22,17 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.avatar.placeholder {
+  background: #d1d5db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .application-date {
@@ -27,6 +42,11 @@
 
 .rating {
   margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #374151;
 }
 
 .star {
@@ -52,4 +72,53 @@
 .score-label {
   font-size: 0.85rem;
   margin-left: 6px;
+}
+
+.referred {
+  color: #16a34a;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.assessment-btn {
+  background: transparent;
+  color: #2563eb;
+  border: 1px dashed #2563eb;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Card Menu (Three-dot) */
+.card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  z-index: 10;
+  width: 120px;
+}
+
+.dropdown-menu div {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu div:hover {
+  background-color: #f3f4f6;
 }

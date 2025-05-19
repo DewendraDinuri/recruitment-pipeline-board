@@ -4,7 +4,13 @@ import CandidateCard from './CandidateCard';
 function Column({ column, columnId }) {
   return (
     <div className="column">
-      <h2>{column.name}</h2>
+      <div className="column-header">
+        <div className={`column-title ${columnId}`}>
+          <span className="column-label">{column.name}</span>
+          <span className="column-count">{column.items.length}</span>
+        </div>
+        <span className="column-detail">Detail &gt;</span>
+      </div>
       <div className="candidate-list">
         {column.items.map(candidate => (
           <CandidateCard key={candidate.id} candidate={candidate} />
