@@ -55,14 +55,14 @@ const Header = () => {
           <span className="tab"><FaCog className="tab-icon" /> Automation <span className="automation-badge">5</span></span>
         </div>
 
-        {/* Filters Row */}
+        
         <div className="filters">
           <input type="text" placeholder="Search" className="search" />
           <select className="filter"><option>Date Range</option></select>
           <select className="filter"><option>Score Range</option></select>
           <select className="filter"><option>Advance Filter</option></select>
 
-          {/* Updated with Icons */}
+          
           <button className="filter">
             <FaUserPlus className="tab-icon" />
             Refer People
