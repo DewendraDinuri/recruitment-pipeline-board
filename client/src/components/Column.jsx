@@ -1,6 +1,6 @@
 import React from 'react';
 import CandidateCard from './CandidateCard';
-
+import '../app.css'
 function Column({ column, columnId }) {
   return (
     <div className="column">
@@ -11,7 +11,7 @@ function Column({ column, columnId }) {
         </div>
         <span className="column-detail">Detail &gt;</span>
       </div>
-
+      
       <div className="candidate-list">
         {column.items.map((candidate) => (
           <CandidateCard key={candidate.id} candidate={candidate} />
