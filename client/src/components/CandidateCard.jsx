@@ -3,7 +3,6 @@ import { FaStar, FaEllipsisV } from 'react-icons/fa';
 
 const CandidateCard = ({ candidate }) => {
   const [showMenu, setShowMenu] = useState(false);
-
   const getInitial = (name) => name?.charAt(0).toUpperCase();
 
   const handleDelete = () => {
@@ -18,32 +17,25 @@ const CandidateCard = ({ candidate }) => {
 
   return (
     <div className="candidate-card">
-      {/* Avatar */}
       {candidate.avatar ? (
-        <img src={candidate.avatar} alt={candidate.name} className="avatar" />
+        <img src={candidate.avatar} className="avatar" alt={candidate.name} />
       ) : (
         <div className="avatar placeholder">{getInitial(candidate.name)}</div>
       )}
 
-      {/* Name and Info */}
       <strong>{candidate.name}</strong>
-      <p>Applied at {candidate.appliedDate}</p>
+      <p className="application-date">Applied at {candidate.appliedDate}</p>
 
-      {/* Rating */}
       <div className="rating">
         <FaStar className="star filled" />
-        <span>{candidate.score} Overall</span>
+        <span className="score-label">{candidate.score} Overall</span>
       </div>
 
-      {/* Referred */}
-      {candidate.referred && <p className="referred">Referred</p>}
-
-      {/* Add Assessment */}
+      {candidate.referred && <span className="referred">Referred</span>}
       {candidate.assessment && (
         <button className="assessment-btn">+ Add Assessment</button>
       )}
 
-      {/* Three-dot Menu */}
       <div className="card-menu" onClick={() => setShowMenu(!showMenu)}>
         <FaEllipsisV />
         {showMenu && (
